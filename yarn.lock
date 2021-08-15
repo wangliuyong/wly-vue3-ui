@@ -380,6 +380,11 @@ vite@^2.4.4:
   optionalDependencies:
     fsevents "~2.3.2"
 
+vue-router@^3.5.2:
+  version "3.5.2"
+  resolved "https://registry.nlark.com/vue-router/download/vue-router-3.5.2.tgz?cache=0&sync_timestamp=1628495505697&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fvue-router%2Fdownload%2Fvue-router-3.5.2.tgz#5f55e3f251970e36c3e8d88a7cd2d67a350ade5c"
+  integrity sha1-X1Xj8lGXDjbD6NiKfNLWejUK3lw=
+
 vue@^3.0.5:
   version "3.2.2"
   resolved "https://registry.nlark.com/vue/download/vue-3.2.2.tgz#11715cb71a02baefd0f6e6552dc623680eb1bf32"

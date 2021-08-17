@@ -18,7 +18,8 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-  // $h:32px;
+@use "sass:math";
+math.div in sass
 .banner {
   padding: 100px 0;
   display: flex;
@@ -35,7 +36,7 @@ export default {
       $h: 28px;
       height: $h;
       line-height: $h;
-      border-radius: $h/2;
+      border-radius: math.div($h, 2);
       padding: 0 8px;
     }
   }

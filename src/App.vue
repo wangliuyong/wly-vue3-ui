@@ -3,11 +3,19 @@
 </template>
 
 <script setup>
-  // import Demo from './components/Demo.vue'
-  // import HelloWorld from './components/HelloWorld.vue'
+import { ref } from "@vue/reactivity";
+import { provide } from "@vue/runtime-core";
+import { router } from './route'
 
-// This starter template is using Vue 3 experimental <script setup> SFCs
-// Check out https://github.com/vuejs/rfcs/blob/master/active-rfcs/0040-script-setup.md
+const width = document.documentElement.clientWidth;
+const menuVisible = ref(width <= 500 ? false : true);
+provide("menuVisible", menuVisible); // set
+router.afterEach(() => {
+  if (width <= 500) {
+    menuVisible.value = false;
+  }
+});
+
 </script>
 
 <style>

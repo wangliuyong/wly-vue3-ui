@@ -1,11 +1,13 @@
-import { createApp } from 'vue'
-import './lib/ui.scss'
-import './index.scss'
-import App from './App.vue'
-import {router} from './route'
+import "./lib/gulu.scss";
+import "./index.scss";
+import { createApp } from "vue";
+import App from "./App.vue";
+import { router } from "./router";
+import './lib/svg.js'
+import 'github-markdown-css'
+import Markdown from './components/Markdown.vue';
 
-
-const app = createApp(App)
-
-app.use(router)
-app.mount('#app')
+const app = createApp(App);
+app.use(router);
+app.mount("#app");
+app.component("Markdown", Markdown)

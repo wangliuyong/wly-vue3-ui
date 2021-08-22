@@ -1,4 +1,4 @@
-# Gulu UI for Vue 3
+# Ly UI for Vue 3
 
 ## 运行步骤
 

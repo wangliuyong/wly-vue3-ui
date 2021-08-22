@@ -1,11 +1,3 @@
-/*
- * @Author: your name
- * @Date: 2021-08-20 23:18:22
- * @LastEditTime: 2021-08-20 23:39:15
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: /wly-vue-ui/plugins/md.ts
- */
 // @ts-nocheck
 import path from 'path'
 import fs from 'fs'
@@ -30,21 +22,20 @@ const mdToJs = str => {
 }
 
 export function md() {
-  console.log(1111)
   return {
-    configureServer: async({ app }) => {
-      // console.log('configureServer', app);
-      app.use(async (ctx, next) => { // koa
-        console.log(222,ctx)
-        if (ctx.path.endsWith('.md')) {
-          ctx.type = 'js'
-          const filePath = path.join(process.cwd(), ctx.path)
-          ctx.body = mdToJs(fs.readFileSync(filePath).toString())
-        } else {
-          await next()
-        }
-      })
-    },
+    configureServer: [ // 用于开发
+      async ({ app }) => {
+        app.use(async (ctx, next) => { // koa
+          if (ctx.path.endsWith('.md')) {
+            ctx.type = 'js'
+            const filePath = path.join(process.cwd(), ctx.path)
+            ctx.body = mdToJs(fs.readFileSync(filePath).toString())
+          } else {
+            await next()
+          }
+        })
+      },
+    ],
     transforms: [{  // 用于 rollup // 插件
       test: context => context.path.endsWith('.md'),
       transform: ({ code }) => mdToJs(code) 

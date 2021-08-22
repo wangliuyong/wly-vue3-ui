@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "delopy": "sh deploy.sh"
+    "deploy": "sh deploy.sh"
   },
   "resolutions": {
     "node-sass": "npm:sass@1.26.11"

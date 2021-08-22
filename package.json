@@ -4,8 +4,8 @@
   "files": [
     "dist/lib/*"
   ],
-  "main": "dist/lib/gulu.js",
-  "module": "dist/lib/gulu.esm.js",
+  "main": "dist/lib/wly-ui.js",
+  "module": "dist/lib/wly-ui.esm.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

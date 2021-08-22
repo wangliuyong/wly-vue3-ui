@@ -13,12 +13,12 @@ export default {
       vue: 'Vue'
     },
     name: 'Gulu',
-    file: 'dist/lib/gulu.js',
+    file: 'dist/lib/wly-ui.js',
     format: 'umd',
     plugins: [terser()]
   }, {
     name: 'Gulu',
-    file: 'dist/lib/gulu.esm.js',
+    file: 'dist/lib/wly-ui.esm.js',
     format: 'es',
     plugins: [terser()]
   }],

@@ -16,3 +16,9 @@
 
 1. 运行 rollup -c
 2. 得到的 dist/lib 目录就是编译后的库文件所在目录
+
+## 注意
+
+库文件打包使用了 rollup 需要安装rollup才能打包库文件
+
+npm install -g rollup
